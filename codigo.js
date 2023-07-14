@@ -41,7 +41,7 @@ const consultarPokemon = async (e) => {
 };
 
 const consultaAPI = async () => {
-    const url = '/Clase 4 progra/codigo.php';
+    const url = '/codigo.php';
     const config = {
         method: 'GET'
     };
