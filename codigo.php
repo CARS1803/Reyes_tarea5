@@ -1,7 +1,12 @@
 <?php
-if($_SERVER['REQUEST_METHOD']==='GET'){
-    $respuesta = "El metodo si es GET";
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $respuesta = "El método sí es GET";
+    mostrarRespuesta($respuesta);
+} else {
+    $respuesta = "ERROR: El método no es GET";
+    mostrarRespuesta($respuesta);
+}
+
+function mostrarRespuesta($respuesta) {
     echo $respuesta;
-}else {
-    echo "ERROR el metodo no es GET";
-};
+}

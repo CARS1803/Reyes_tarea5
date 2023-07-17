@@ -39,9 +39,8 @@ const consultarPokemon = async (e) => {
         console.log(error);
     }
 };
-
 const consultaAPI = async () => {
-    const url = '/codigo.php';
+    const url = './codigo.php';
     const config = {
         method: 'GET'
     };
@@ -50,11 +49,16 @@ const consultaAPI = async () => {
         const respuesta = await fetch(url, config);
         const data = await respuesta.text();
 
-        alert(data);
+        mostrarAlerta(data);
     } catch (error) {
-        alert(error);
+        mostrarAlerta(error);
     }
 }
+
+const mostrarAlerta = (mensaje) => {
+    alert(mensaje);
+}
+
 
 formulario.addEventListener('submit', consultarPokemon);
 button.addEventListener('click', consultaAPI);
